@@ -14,6 +14,7 @@ setTimeout(() => {
   camera.addEventListener("viewpointChanged", updatePosition, false);
 }, 1000);
 const description = document.getElementById("description");
+const posIndicator = document.getElementById("minimap-indicator");
 
 window.getMousePosOfElement = (evt) => {
   const rect = evt.target.getBoundingClientRect();
@@ -73,14 +74,13 @@ function checkAndUpdateCamera(coords, elementCoords, cameraId) {
 let lastFunctionCall = Date.now();
 function updatePosition(e) {
   if (!camera) return;
-  if (Date.now() - lastFunctionCall < 500) return;
+  if (Date.now() - lastFunctionCall < 200) return;
   lastFunctionCall = Date.now();
   const pos = e.position;
   const _2dPos = {
     x: pos.x * 2,
     y: pos.z * 2,
   };
-  const posIndicator = document.getElementById("minimap-indicator");
   const finalX = _2dPos.x + spawnPointCoords.x;
   const finalY = _2dPos.y + spawnPointCoords.y;
   posIndicator.style = `
