@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ma premiere page en X3DOM</title>
+    <script type="text/javascript" src="./x3dom/x3dom.js"></script>
+    <link rel="stylesheet" type="text/css" href="./x3dom/x3dom.css" />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+  </head>
+  <body>
+    <script type="module" src="./index.js"></script>
+    <x3d class="x3d-scene">
+      <scene>
+        <navigationInfo type='"walk" "any"' id="navType"></navigationInfo>
+        <viewpoint
+          position="0.00000 1 0"
+          id="defaultView"
+          description="defaultX3DViewpointNode"></viewpoint>
+        <Viewpoint
+          position="-56.39668 1.59538 2.49908"
+          orientation="-0.04329 -0.99886 -0.02031 0.87842"
+          zNear="0.01480"
+          zFar="148.03939"
+          centerOfRotation="-0.59704 2.31870 -6.22475"
+          fieldOfView="0.78540"
+          id="viewEntrance"
+          description="viewEntrance"></Viewpoint>
+        <Viewpoint
+          position="-10.53560 1.59631 26.87953"
+          orientation="-0.00668 -0.99998 -0.00100 0.29625"
+          zNear="0.01480"
+          zFar="148.03939"
+          centerOfRotation="-33.07308 1.59158 53.41658"
+          fieldOfView="0.78540"
+          id="viewBudha"
+          description="viewBudha"></Viewpoint>
+        <Viewpoint
+          position="3.02954 1.59605 50.46946"
+          orientation="0.00021 1.00000 0.00240 3.31490"
+          zNear="0.01480"
+          zFar="148.03939"
+          centerOfRotation="-33.07308 1.59158 53.41658"
+          fieldOfView="0.78540"
+          id="viewJoconde"
+          description="viewJoconde"></Viewpoint>
+        <Viewpoint
+          position="25.68055 1.59525 20.31158"
+          orientation="-0.01320 -0.99978 -0.01611 1.76870"
+          zNear="0.01480"
+          zFar="148.03939"
+          centerOfRotation="-33.07308 1.59158 53.41658"
+          fieldOfView="0.78540"
+          id="viewCri"
+          description="viewCri"></Viewpoint>
+        <Viewpoint
+          position="-30.96696 1.59568 58.24326"
+          orientation="0.00153 1.00000 -0.00235 1.98779"
+          zNear="0.01480"
+          zFar="148.03939"
+          centerOfRotation="-56.62607 2.62841 31.56672"
+          fieldOfView="0.78540"
+          id="viewStatues"
+          description="viewStatues"></Viewpoint>
+        <!-- Inlines -->
+        <!-- Tableaux -->
+        <inline onclick="showDescription('adele')" url="gltf/tableaux/adele_bloch.gltf"></inline>
+        <inline
+          onclick="showDescription('andy_warol')"
+          url="gltf/tableaux/andy_warol.gltf"></inline>
+        <inline onclick="showDescription('fleurs')" url="gltf/tableaux/fleurs.gltf"></inline>
+        <inline onclick="showDescription('joconde')" url="gltf/tableaux/joconde.gltf"></inline>
+        <inline onclick="showDescription('perle')" url="gltf/tableaux/johann_vermeer.gltf"></inline>
+        <inline onclick="showDescription('laitiere')" url="gltf/tableaux/la_laitiere.gltf"></inline>
+        <inline
+          onclick="showDescription('cri')"
+          url="gltf/tableaux/meuf_qui_se_tient_les_joues.gltf"></inline>
+        <inline onclick="showDescription('monet')" url="gltf/tableaux/monet_nympheas.gltf"></inline>
+        <inline onclick="showDescription('soleil')" url="gltf/tableaux/monet_soleil.gltf"></inline>
+        <inline onclick="showDescription('nuit')" url="gltf/tableaux/nuit_etoile.gltf"></inline>
+        <!-- Statues -->
+        <inline onclick="showDescription('budha')" url="gltf/statues/budhdha.gltf"></inline>
+        <inline onclick="showDescription('easter')" url="gltf/statues/easter_island.gltf"></inline>
+        <inline onclick="showDescription('sphynx')" url="gltf/statues/sphynx.gltf"></inline>
+        <inline onclick="showDescription('venus')" url="gltf/statues/venus.gltf"></inline>
+        <!-- Salle -->
+        <inline url="gltf/sallev2.gltf"></inline>
+        <inline url="gltf/lights/sallev2.gltf"></inline>
+      </scene>
+    </x3d>
+    <img
+      id="minimap"
+      src="minimap.png"
+      alt="mini map"
+      onclick="getMousePosOfElement(event)"
+      class="mini-map" />
+    <div id="description" class="description"></div>
+    <div id="minimap-indicator" class="minimap-indicator"></div>
+  </body>
+</html>
