@@ -11,7 +11,7 @@
     <script type="module" src="./index.js"></script>
     <x3d class="x3d-scene">
       <scene>
-        <navigationInfo type='"walk" "any"' id="navType"></navigationInfo>
+        <navigationInfo headlight="true" type='"walk" "any"' id="navType"></navigationInfo>
         <viewpoint
           position="0.00000 1 0"
           id="defaultView"
@@ -61,6 +61,31 @@
           fieldOfView="0.78540"
           id="viewStatues"
           description="viewStatues"></Viewpoint>
+        <!-- Lights -->
+        <PointLight
+          id="point"
+          on="TRUE"
+          intensity="0.9000"
+          color="1 1 1"
+          location="0.00000 1 0"
+          radius="50.0000">
+        </PointLight>
+        <PointLight
+          id="point"
+          on="TRUE"
+          intensity="0.9000"
+          color="1 1 1"
+          location="4.35798 1.59451 49.32285"
+          radius="50.0000">
+        </PointLight>
+        <PointLight
+          id="point"
+          on="TRUE"
+          intensity="0.9000"
+          color="1 1 1"
+          location="-54.09254 1.66767 2.67921"
+          radius="50.0000">
+        </PointLight>
         <!-- Inlines -->
         <!-- Tableaux -->
         <inline onclick="showDescription('adele')" url="gltf/tableaux/adele_bloch.gltf"></inline>
@@ -84,7 +109,10 @@
         <inline onclick="showDescription('venus')" url="gltf/statues/venus.gltf"></inline>
         <!-- Salle -->
         <inline url="gltf/sallev2.gltf"></inline>
-        <inline url="gltf/lights/sallev2.gltf"></inline>
+        <inline url="gltf/tapis/tapis.gltf"></inline>
+        <inline url="gltf/deco/deco.gltf"></inline>
+        <inline url="gltf/pilliers/pillar.gltf"></inline>
+        <inline url="gltf/foule/foule.gltf"></inline>
       </scene>
     </x3d>
     <img
